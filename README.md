@@ -4,6 +4,37 @@ The [Edinburgh Associative Thesaurus](http://www.eat.rl.ac.uk/) (EAT) is a set o
 
 This data was ported to JSON format by Darius Kazemi in April 2015. He does not own or maintain the data. See the License information below for details.
 
+Words are normalized to upper case. The way you'd query a word is by loading the JSON object and then:
+
+```javascript
+// assuming you loaded the json into a variable called "thesaurus"
+
+console.log(thesaurus['HELLO']);
+/*
+[ { 'GOOD-BYE': '56' },
+  { DOLLY: '8' },
+  { CHEERIO: '5' },
+  { GREETING: '3' },
+  { HI: '3' },
+  { THERE: '3' },
+  { AGAIN: '2' },
+  { FRIEND: '2' },
+  { HELLO: '2' },
+  { BOY: '1' },
+  { CHEERFUL: '1' },
+  { GOOD: '1' },
+  { LOOK: '1' },
+  { MAN: '1' },
+  { MARIAN: '1' },
+  { MEETING: '1' },
+  { MORNING: '1' },
+  { PLUM: '1' },
+  { SMILE: '1' },
+  { WHERE: '1' },
+  { WORLD: '1' } ]
+*/
+```
+
 From the official documentation:
 
 >The Edinburgh Associative Thesaurus is a database of word association norms. The traditional way to collect word association norms is to show or say a word to several people and ask them to say the word which first comes to their minds upon receiving the stimulus. The link established between the stimulus and the response is not semantically labelled (e.g. as synonym, antonym or by a case relation) and can only be regarded as an association. These associations can be viewed as a list, but convey more if represented as a network. Such networks can be constructed from the list by a variety of methods including multi- dimensional scaling, clustering and graph theoretic representation using the association values to represent probabilities of stimulus-response association.
