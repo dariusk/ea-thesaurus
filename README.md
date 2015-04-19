@@ -4,7 +4,7 @@ The [Edinburgh Associative Thesaurus](http://www.eat.rl.ac.uk/) (EAT) is a set o
 
 This data was ported to JSON format by Darius Kazemi in April 2015. He does not own or maintain the data. See the License information below for details.
 
-Words are normalized to upper case. The way you'd query a word is by loading the JSON object and then:
+Words are normalized to upper case. Here's an example of how you'd access the data in JavaScript. It'll be similar in other languages:
 
 ```javascript
 // assuming you loaded the json into a variable called "thesaurus"
