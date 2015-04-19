@@ -35,6 +35,8 @@ console.log(thesaurus['HELLO']);
 */
 ```
 
+This returns a list of words that subjects associated with the source word ("hello" in this case), along with the frequency of responses. So in this case, 56 people associated "good-bye" with "hello". The result is always sorted in descending order by frequency, then ascending alphabetically where frequencies are equal. So `thesaurus[word][0]` will *probably* return the most common word association, but it also might be tied two or more ways. Worth double checking when parsing/using the data.
+
 From the official documentation:
 
 >The Edinburgh Associative Thesaurus is a database of word association norms. The traditional way to collect word association norms is to show or say a word to several people and ask them to say the word which first comes to their minds upon receiving the stimulus. The link established between the stimulus and the response is not semantically labelled (e.g. as synonym, antonym or by a case relation) and can only be regarded as an association. These associations can be viewed as a list, but convey more if represented as a network. Such networks can be constructed from the list by a variety of methods including multi- dimensional scaling, clustering and graph theoretic representation using the association values to represent probabilities of stimulus-response association.
